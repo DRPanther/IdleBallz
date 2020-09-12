@@ -4,4 +4,4 @@ obj/
 *.depend
 *.layout
 *.save
-
+*.o
