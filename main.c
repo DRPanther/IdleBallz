@@ -17,7 +17,7 @@ struct balls {
     int price;
 };
 
-struct balls ball[8];
+struct balls ball[9];
 //struct ball ball2;
 //struct ball ball3;
 //struct ball ball4;
@@ -220,55 +220,55 @@ void game(void)
             if (ball[2].y==2) {ball[2].left=0; ball[2].right=1; scoretens+=25;}
             if (ball[2].x>=BOARD_HEIGHT-1) {ball[2].up=0; ball[2].down=1; scoretens+=25;}
             if (ball[2].y>=BOARD_WIDTH-1) {ball[2].left=1; ball[2].right=0; scoretens+=25;}
-            if (ball[1].x==ball[2].x && ball[1].y==ball[2].y) {scoretens+=500;}
+            if (ball[1].x==ball[2].x && ball[1].y==ball[2].y) {scoretens+=50;}
         }
 
         if (ball[3].active==1) {
-            if (ball[3].x==2) {ball[3].up=1; ball[3].down=0; scoretens+=100;}
-            if (ball[3].y==2) {ball[3].left=0; ball[3].right=1; scoretens+=100;}
-            if (ball[3].x>=BOARD_HEIGHT-1) {ball[3].up=0; ball[3].down=1; scoretens+=100;}
-            if (ball[3].y>=BOARD_WIDTH-1) {ball[3].left=1; ball[3].right=0; scoretens+=100;}
-            if ((ball[1].x==ball[3].x && ball[1].y==ball[3].y) || (ball[2].x==ball[3].x && ball[2].y==ball[3].y)) {scoretens+=1000;}
+            if (ball[3].x==2) {ball[3].up=1; ball[3].down=0; scoretens+=50;}
+            if (ball[3].y==2) {ball[3].left=0; ball[3].right=1; scoretens+=50;}
+            if (ball[3].x>=BOARD_HEIGHT-1) {ball[3].up=0; ball[3].down=1; scoretens+=50;}
+            if (ball[3].y>=BOARD_WIDTH-1) {ball[3].left=1; ball[3].right=0; scoretens+=50;}
+            if ((ball[1].x==ball[3].x && ball[1].y==ball[3].y) || (ball[2].x==ball[3].x && ball[2].y==ball[3].y)) {scoretens+=100;}
         }
         if (ball[4].active==1)
         {
-            if (ball[4].x==2) {ball[4].up=1; ball[4].down=0; scoretens+=1000;}
-            if (ball[4].y==2) {ball[4].left=0; ball[4].right=1; scoretens+=1000;}
-            if (ball[4].x>=BOARD_HEIGHT-1) {ball[4].up=0; ball[4].down=1; scoretens+=1000;}
-            if (ball[4].y>=BOARD_WIDTH-1) {ball[4].left=1; ball[4].right=0; scoretens+=1000;}
-            if ((ball[1].x==ball[4].x && ball[1].y==ball[4].y) || (ball[2].x==ball[4].x && ball[2].y==ball[4].y) || (ball[3].x==ball[4].x && ball[3].y==ball[4].y)) {scoretens+=10000;}
+            if (ball[4].x==2) {ball[4].up=1; ball[4].down=0; scoretens+=100;}
+            if (ball[4].y==2) {ball[4].left=0; ball[4].right=1; scoretens+=100;}
+            if (ball[4].x>=BOARD_HEIGHT-1) {ball[4].up=0; ball[4].down=1; scoretens+=100;}
+            if (ball[4].y>=BOARD_WIDTH-1) {ball[4].left=1; ball[4].right=0; scoretens+=100;}
+            if ((ball[1].x==ball[4].x && ball[1].y==ball[4].y) || (ball[2].x==ball[4].x && ball[2].y==ball[4].y) || (ball[3].x==ball[4].x && ball[3].y==ball[4].y)) {scoretens+=500;}
         }
         if (ball[5].active==1)
         {
-            if (ball[5].x==2) {ball[5].up=1; ball[5].down=0; scoretens+=10000;}
-            if (ball[5].y==2) {ball[5].left=0; ball[5].right=1; scoretens+=10000;}
-            if (ball[5].x>=BOARD_HEIGHT-1) {ball[5].up=0; ball[5].down=1; scoretens+=10000;}
-            if (ball[5].y>=BOARD_WIDTH-1) {ball[5].left=1; ball[5].right=0; scoretens+=10000;}
-            if ((ball[1].x==ball[5].x && ball[1].y==ball[5].y) || (ball[2].x==ball[5].x && ball[2].y==ball[5].y) || (ball[3].x==ball[5].x && ball[3].y==ball[5].y) || (ball[4].x==ball[5].x && ball[4].y==ball[5].y)) {scoretens+=100000;}
+            if (ball[5].x==2) {ball[5].up=1; ball[5].down=0; scoretens+=500;}
+            if (ball[5].y==2) {ball[5].left=0; ball[5].right=1; scoretens+=500;}
+            if (ball[5].x>=BOARD_HEIGHT-1) {ball[5].up=0; ball[5].down=1; scoretens+=500;}
+            if (ball[5].y>=BOARD_WIDTH-1) {ball[5].left=1; ball[5].right=0; scoretens+=500;}
+            if ((ball[1].x==ball[5].x && ball[1].y==ball[5].y) || (ball[2].x==ball[5].x && ball[2].y==ball[5].y) || (ball[3].x==ball[5].x && ball[3].y==ball[5].y) || (ball[4].x==ball[5].x && ball[4].y==ball[5].y)) {scoretens+=1000;}
         }
         if (ball[6].active==1)
         {
-            if (ball[6].x==2) {ball[6].up=1; ball[6].down=0; scoretens+=50000;}
-            if (ball[6].y==2) {ball[6].left=0; ball[6].right=1; scoretens+=50000;}
-            if (ball[6].x>=BOARD_HEIGHT-1) {ball[6].up=0; ball[6].down=1; scoretens+=50000;}
-            if (ball[6].y>=BOARD_WIDTH-1) {ball[6].left=1; ball[6].right=0; scoretens+=50000;}
-            if ((ball[1].x==ball[6].x && ball[1].y==ball[6].y) || (ball[2].x==ball[6].x && ball[2].y==ball[6].y) || (ball[3].x==ball[6].x && ball[3].y==ball[6].y) || (ball[4].x==ball[6].x && ball[4].y==ball[6].y) || (ball[5].x==ball[6].x && ball[5].y==ball[6].y)) {scoretens+=500000;}
+            if (ball[6].x==2) {ball[6].up=1; ball[6].down=0; scoretens+=750;}
+            if (ball[6].y==2) {ball[6].left=0; ball[6].right=1; scoretens+=750;}
+            if (ball[6].x>=BOARD_HEIGHT-1) {ball[6].up=0; ball[6].down=1; scoretens+=750;}
+            if (ball[6].y>=BOARD_WIDTH-1) {ball[6].left=1; ball[6].right=0; scoretens+=750;}
+            if ((ball[1].x==ball[6].x && ball[1].y==ball[6].y) || (ball[2].x==ball[6].x && ball[2].y==ball[6].y) || (ball[3].x==ball[6].x && ball[3].y==ball[6].y) || (ball[4].x==ball[6].x && ball[4].y==ball[6].y) || (ball[5].x==ball[6].x && ball[5].y==ball[6].y)) {scoretens+=2000;}
         }
         if (ball[7].active==1)
         {
-            if (ball[7].x==2) {ball[7].up=1; ball[7].down=0; scoretens+=100000;}
-            if (ball[7].y==2) {ball[7].left=0; ball[7].right=1; scoretens+=100000;}
-            if (ball[7].x>=BOARD_HEIGHT-1) {ball[7].up=0; ball[7].down=1; scoretens+=100000;}
-            if (ball[7].y>=BOARD_WIDTH-1) {ball[7].left=1; ball[7].right=0; scoretens+=100000;}
-            if ((ball[1].x==ball[7].x && ball[1].y==ball[7].y) || (ball[2].x==ball[7].x && ball[2].y==ball[7].y) || (ball[3].x==ball[7].x && ball[3].y==ball[7].y) || (ball[4].x==ball[7].x && ball[4].y==ball[7].y) || (ball[5].x==ball[7].x && ball[5].y==ball[7].y) || (ball[6].x==ball[7].x && ball[6].y==ball[7].y)) {scoretens+=500000;}
+            if (ball[7].x==2) {ball[7].up=1; ball[7].down=0; scoretens+=1000;}
+            if (ball[7].y==2) {ball[7].left=0; ball[7].right=1; scoretens+=1000;}
+            if (ball[7].x>=BOARD_HEIGHT-1) {ball[7].up=0; ball[7].down=1; scoretens+=1000;}
+            if (ball[7].y>=BOARD_WIDTH-1) {ball[7].left=1; ball[7].right=0; scoretens+=1000;}
+            if ((ball[1].x==ball[7].x && ball[1].y==ball[7].y) || (ball[2].x==ball[7].x && ball[2].y==ball[7].y) || (ball[3].x==ball[7].x && ball[3].y==ball[7].y) || (ball[4].x==ball[7].x && ball[4].y==ball[7].y) || (ball[5].x==ball[7].x && ball[5].y==ball[7].y) || (ball[6].x==ball[7].x && ball[6].y==ball[7].y)) {scoretens+=5000;}
         }
         if (ball[8].active==1)
         {
-            if (ball[8].x==2) {ball[8].up=1; ball[8].down=0; scoretens+=500000;}
-            if (ball[8].y==2) {ball[8].left=0; ball[8].right=1; scoretens+=500000;}
-            if (ball[8].x>=BOARD_HEIGHT-1) {ball[8].up=0; ball[8].down=1; scoretens+=500000;}
-            if (ball[8].y>=BOARD_WIDTH-1) {ball[8].left=1; ball[8].right=0; scoretens+=500000;}
-            if ((ball[1].x==ball[8].x && ball[1].y==ball[8].y) || (ball[2].x==ball[8].x && ball[2].y==ball[8].y) || (ball[3].x==ball[8].x && ball[3].y==ball[8].y) || (ball[4].x==ball[8].x && ball[4].y==ball[8].y) || (ball[5].x==ball[8].x && ball[5].y==ball[8].y) || (ball[6].x==ball[8].x && ball[6].y==ball[8].y) || (ball[7].x==ball[8].x && ball[7].y==ball[8].y)) {scoretens+=1000000;}
+            if (ball[8].x==2) {ball[8].up=1; ball[8].down=0; scoretens+=5000;}
+            if (ball[8].y==2) {ball[8].left=0; ball[8].right=1; scoretens+=5000;}
+            if (ball[8].x>=BOARD_HEIGHT-1) {ball[8].up=0; ball[8].down=1; scoretens+=5000;}
+            if (ball[8].y>=BOARD_WIDTH-1) {ball[8].left=1; ball[8].right=0; scoretens+=5000;}
+            if ((ball[1].x==ball[8].x && ball[1].y==ball[8].y) || (ball[2].x==ball[8].x && ball[2].y==ball[8].y) || (ball[3].x==ball[8].x && ball[3].y==ball[8].y) || (ball[4].x==ball[8].x && ball[4].y==ball[8].y) || (ball[5].x==ball[8].x && ball[5].y==ball[8].y) || (ball[6].x==ball[8].x && ball[6].y==ball[8].y) || (ball[7].x==ball[8].x && ball[7].y==ball[8].y)) {scoretens+=10000;}
         }
 
         od_set_cursor(ball[1].x,ball[1].y);
@@ -311,6 +311,8 @@ void game(void)
         od_printf("Cost: %d",ball[activeball+1].price);
         od_set_cursor(9,69);
         if (activeball==8) od_printf("Not yet...");
+        od_set_cursor(11,63);
+        od_printf("Q - Quit game");
         od_set_cursor(23,1);
         for (int x=1;x<=activeball;x++) ball[x].active=1;
 
