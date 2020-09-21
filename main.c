@@ -510,8 +510,8 @@ void listplayers(void) //Creates list to show of other players - Also creates as
   if (total_records>1) bubble_sort(Players,get_total_idx());
   for (x=0;x<total_records;x++)
   {
-    od_printf("`blue`  %-42s %5.2f seconds\r\n`white`",Players[x].Name,Players[x].time);
-    fprintf(fptr2,"  %-42s %5.2f seconds\r\n",Players[x].Name,Players[x].time);
+    if (Plyr.time!=0) od_printf("`blue`  %-42s %5.2f seconds\r\n`white`",Players[x].Name,Players[x].time);
+    if (Plyr.time!=0) fprintf(fptr2,"  %-42s %5.2f seconds\r\n",Players[x].Name,Players[x].time);
   }
   fclose(fptr);
   fclose(fptr2);
